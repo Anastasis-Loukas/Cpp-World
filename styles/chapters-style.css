@@ -1,0 +1,241 @@
+body {
+    background-color: rgb(196, 228, 250);
+    font-family: Arial;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    
+}
+
+main {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 8px;
+    margin-inline-end: 20%;
+    /*margin-inline-end: 350px;*/
+}
+
+
+#logo {
+    width: 282px;
+    height: 74px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+}
+
+
+#title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    background-color: rgb(25, 25, 112);
+    color: white;
+    font-size: 44px;
+    border: 12px solid midnightblue;
+    text-align: center;
+}
+
+#disconnect {
+    width: 150px;
+    height: 87px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(25, 25, 112);
+    border: 3px solid rgb(25, 25, 112);
+    /*border-left: 1px solid black;*/
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    text-align: center;
+    line-height: 74px; 
+}
+
+#disconnect:hover {
+    /*background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);*/
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+#statistics {
+
+    width: 150px;
+    height: 87px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(25, 25, 112);
+    border: 3px solid rgb(25, 25, 112);
+    /*border-left: 1px solid black;*/
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 0px;
+    right: 160px;
+    text-align: center;
+    line-height: 74px; 
+}
+
+#statistics:hover {
+    background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+#nav-menu {
+    position: sticky;
+    top: 0;
+}
+
+#chapter-menu {
+    background-color: skyblue;
+    font-size: 24px;
+    list-style: none;
+    margin-block-start: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#chapter-menu li {
+    display: inline;
+}
+
+
+#chapter-menu a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding-right: 150px;
+    padding-left: 150px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    transition-duration: 0.4s;
+    
+}
+
+#chapter-menu a:hover {
+    background-color: black;
+    color: white;
+}
+
+#chapter-menu a:first-child {
+    margin-left: 23px;
+    
+}
+
+
+#nav-bar {
+    background-color: skyblue;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    right: 0px;
+    padding-right: 25px;
+    padding-left: 25px;
+    height: 100%;
+    width:20%;
+    overflow-x: hidden;
+    /*border-top-left-radius: 20px;*/
+    
+
+    
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: black;
+}
+
+#nav-bar a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+#nav-bar ol {
+    counter-reset: item;
+    text-align: left;
+}
+
+#nav-bar li {
+    display: block;
+    margin-left: -35px;
+}
+
+#nav-bar li:before {
+    content: counters(item, ".") ") ";
+    counter-increment: item;
+}
+
+
+main > h1:first-of-type {
+    text-align: center;
+}
+
+#chapter-end-menu {
+    /*font-size: 28px;*/
+    font-size: 1.75rem;
+    list-style: none;
+    width:100%;
+   
+}
+
+#chapter-end-menu li {
+    display: inline;
+
+}
+
+#chapter-end-menu a {
+    background-color: skyblue;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition-duration: 0.4s;
+  
+    
+    
+}
+
+#chapter-end-menu a[href]:hover {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+}
+
+#chapter-end-menu li:first-of-type a {
+    margin-left: 40px;
+   
+}
+
+
+
+.bold {
+    font-weight: bold;
+}
+
+/*αλλαγές στις bootstrap classes*/
+.nav-item:hover .nav-link {
+    color:white;/* Αλλάγη χρώματος κειμένου */
+    background-color:black; /* Αλλάγη χρώματος φόντου */
+  
+  }
+/*
+  .container{
+    margin-top: 0%;
+  }*/
+
+  #current_chapter{
+    pointer-events: none;
+}
+
+

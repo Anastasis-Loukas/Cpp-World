@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Τελική Άσκηση</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../styles/exercises-style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Τελική Άσκηση</h1><br><br>
+        <a href="../main_menu.php"><img id="logo" src="../images/logo2.jpg"></a>
+        <button id="disconnect">Αποσύνδεση</button>
+    </header>
+
+    <main>
+        <div class="container col-lg-6" id="container">
+            <div class="row">
+                <div class="col-lg-auto col-md-auto col-sm-auto">
+                    <form action="final_exercise_result.php" method="POST" autocomplete="off">
+                        <h3>1. Αντιστοίχιση</h3>
+                        <table class="table-type2">
+                            <tr>
+                                <td>int i;</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>a. Είσοδος δεδομένων</td>
+                            </tr>
+                            <tr>
+                                <td>cout&lt;&lt;;</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>b. Δήλωση πραγματικού αριθμού</td>
+                            </tr>
+                            <tr>
+                                <td>double i;</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>c. Δήλωση χαρακτήρα</td>
+                            </tr>
+                            <tr>
+                                <td>cin>>;</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>d. Δήλωση ακέραιου αριθμού</td>
+                            </tr>
+                            <tr>
+                                <td>char i;</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>e. Έξοδος δεδομένων</td>
+                            </tr>
+                        </table><br>
+
+                        <h3>2. Έστω το παρακάτω πρόγραμμα</h3>
+                        <code class="text-dark">
+                    #include &lt;iostream&gt;<br><br>
+                    using namespace std;<br><br>
+                    int main()<br>
+                    {<br>
+                        &emsp;&emsp;int a, b, c;<br>
+                        &emsp;&emsp;double d;<br>
+                        &emsp;&emsp;bool e, f;<br><br>
+                        &emsp;&emsp;a = 1;<br>
+                        &emsp;&emsp;b = ++a;<br>
+                        &emsp;&emsp;c = a++;<br>
+                        &emsp;&emsp;d = 3.0;<br>
+                        &emsp;&emsp;d = d / c;<br>
+                        &emsp;&emsp;e = d > 1;<br>
+                        &emsp;&emsp;f = (a == c) || (c > b);<br><br>
+                        &emsp;&emsp;return 0;<br>
+                    }
+                </code>
+                        <p>Συμπληρώστε τις τελικές τιμές των μεταβλητών αφού εκτελεστεί το πρόγραμμα</p>
+                        <table>
+                            <tr>
+                                <td>a:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>b:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>e:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>f:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                        </table><br>
+
+                        <h3>3. Αντιστοίχιση</h3>
+                        <table class="table-type2">
+                            <tr>
+                                <td>strcpy()</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>a. Σύγκριση συμβολοσειρών</td>
+                            </tr>
+                            <tr>
+                                <td>gets()</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>b. Συνένωση συμβολοσειρών</td>
+                            </tr>
+                            <tr>
+                                <td>strcmp()</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>c. Εκτύπωση συμβολοσειράς</td>
+                            </tr>
+                            <tr>
+                                <td>puts()</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>d. Αντιγραφή συμβολοσειράς</td>
+                            </tr>
+                            <tr>
+                                <td>strcat()</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>e. Διάβασμα συμβολοσειράς</td>
+                            </tr>
+                        </table><br>
+
+                        <h3>4. Έστω το παρακάτω πρόγραμμα με δομές ελέγχου</h3>
+                        <code class="text-dark">
+                    #include &lt;iostream&gt;<br><br>
+                    using namespace std;<br><br>
+                    int main()<br>
+                    {<br>
+                        &emsp;&emsp;int a, b, c, d, e;<br><br>
+                        &emsp;&emsp;a = 1;<br>
+                        &emsp;&emsp;b = 2;<br>
+                        &emsp;&emsp;c = 3;<br>
+                        &emsp;&emsp;d = 4;<br>
+                        &emsp;&emsp;e = 5;<br><br>
+                        &emsp;&emsp;if((a + d) == (b + c))<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;a = a + b;<br>
+                        &emsp;&emsp;}<br><br>
+                        &emsp;&emsp;if(a &lt; c)<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;b = b + c;<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;&emsp;else if(a == c)<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;c = c + b;<br>
+                        &emsp;&emsp;}<br><br>
+                        &emsp;&emsp;if(c &lt; d)<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;d = d + e;<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;&emsp;else if(c == d)<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;e = e + d;<br>
+                        &emsp;&emsp;}<br>
+                        &emsp;&emsp;else<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;c = c - e;<br>
+                        &emsp;&emsp;}<br><br>
+                        &emsp;&emsp;return 0;<br>
+                    }
+                </code>
+                        <p>Συμπληρώστε τις τελικές τιμές των μεταβλητών αφού εκτελεστεί το πρόγραμμα</p>
+                        <table>
+                            <tr>
+                                <td>a:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>b:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>e:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                        </table><br>
+
+                        <h3>5. Έστω το παρακάτω πρόγραμμα με δομές επανάληψης</h3>
+                        <code class="text-dark">
+                    #include &lt;iostream&gt;<br><br>
+                    using namespace std;<br><br>
+                    int main()<br>
+                    {<br>
+                        &emsp;&emsp;int a, b, c, d, e;<br><br>
+                        &emsp;&emsp;b = 0;<br>
+                        &emsp;&emsp;c = 0;<br>
+                        &emsp;&emsp;d = 0;<br>
+                        &emsp;&emsp;e = 0;<br><br>
+                        &emsp;&emsp;for(a = 0; a &lt; 5; a++)<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;b = b + a;<br>
+                        &emsp;&emsp;}<br><br>
+                        &emsp;&emsp;while(b >= 0)<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;c++;<br>
+                        &emsp;&emsp;&emsp;&emsp;d = d + 2;<br>
+                        &emsp;&emsp;&emsp;&emsp;b--;<br>
+                        &emsp;&emsp;}<br><br>
+                        &emsp;&emsp;do<br>
+                        &emsp;&emsp;{<br>
+                        &emsp;&emsp;&emsp;&emsp;e = e + 4;<br>
+                        &emsp;&emsp;&emsp;&emsp;d++;<br>
+                        &emsp;&emsp;}while(d &lt; 10);<br><br>
+                        &emsp;&emsp;return 0;<br>
+                    }
+                </code>
+                        <p>Συμπληρώστε τις τελικές τιμές των μεταβλητών αφού εκτελεστεί το πρόγραμμα</p>
+                        <table>
+                            <tr>
+                                <td>a:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>b:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>e:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                        </table><br>
+
+                        <h3>6. Αντιστοίχιση</h3>
+                        <table class="table-type2">
+                            <tr>
+                                <td>const int *i</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>a. Δήλωση σταθερού δείκτη σε ακέραιο</td>
+                            </tr>
+                            <tr>
+                                <td>int * const i</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>b. Διαγραφή δυναμικά δεσμευμένης μνήμης</td>
+                            </tr>
+                            <tr>
+                                <td>const int &i</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>c. Δυναμική δέσμευση μνήμης για έναν ακέραιο</td>
+                            </tr>
+                            <tr>
+                                <td>new int</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>d. Δήλωση αναφοράς σε σταθερό ακέραιο</td>
+                            </tr>
+                            <tr>
+                                <td>delete</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>e. Δήλωση δείκτη σε σταθερό ακέραιο</td>
+                            </tr>
+                        </table><br>
+
+                        <h3>7. Έστω το παρακάτω πρόγραμμα</h3>
+                        <code class="text-dark">
+                    #include &lt;iostream&gt;<br><br>
+                    using namespace std;<br><br>
+                    int main()<br>
+                    {<br>
+                        &emsp;&emsp;int a, b, temp, *c, *d;<br>
+                        &emsp;&emsp;c = &amp;a;<br>
+                        &emsp;&emsp;d = &amp;b;<br>
+                        &emsp;&emsp;int &amp;e = b;<br>
+                        &emsp;&emsp;int &amp;f = *c;<br><br>
+                        &emsp;&emsp;a = 5;<br>
+                        &emsp;&emsp;b = 10;<br><br>
+                        &emsp;&emsp;temp = *c;<br>
+                        &emsp;&emsp;*c = *d;<br>
+                        &emsp;&emsp;*d = temp;<br><br>
+                        &emsp;&emsp;d = c<br>
+                        &emsp;&emsp;*d = 6;<br><br>
+                        &emsp;&emsp;e--;<br>
+                        &emsp;&emsp;f++;<br><br>
+                        &emsp;&emsp;return 0;<br>
+                    }
+                </code>
+                        <p>Συμπληρώστε τις τελικές τιμές αφού εκτελεστεί το πρόγραμμα</p>
+                        <table>
+                            <tr>
+                                <td>a:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>b:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>*c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>*d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>e:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>f:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                        </table><br>
+                        <p>
+                            Έστω ότι οι διευθύνσεις της στοίβας ξεκινάνε από τον αριθμό 1000, κάθε ακέραιος έχει μέγεθος
+                            4 byte και το λειτουργικό σύστημα στο οποίο εκτελείται το πρόγραμμα είναι 64 bit.
+                            Ποιές θα είναι οι τιμές των διευθύνσεων μετά την εκτέλεση του προγράμματος
+                        </p>
+                        <table>
+                            <tr>
+                                <td>&a:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&b:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&temp:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&e:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>&f:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                        </table><br>
+
+                        <h3>8. Έστω το παρακάτω πρόγραμμα</h3>
+                        <code class="text-dark">
+                    #include &lt;iostream&gt;<br><br>
+                    using namespace std;<br><br>
+                    void swap_by_value(int, int);<br>
+                    void swap_by_reference(int&, int&);<br>
+                    void swap_by_pointer(int*, int*);<br><br>
+                    int main()<br>
+                    {<br>
+                        &emsp;&emsp;int a, b, c, d, e, f;<br><br>
+                        &emsp;&emsp;a = c = e = 5;<br>
+                        &emsp;&emsp;b = d = f = 10;<br><br>
+                        &emsp;&emsp;swap_by_value(a, b);<br>
+                        &emsp;&emsp;swap_by_reference(c, d);<br>
+                        &emsp;&emsp;swap_by_pointer(&e, &f);<br><br>  
+                        &emsp;&emsp;return 0;<br>
+                    }<br><br>
+                    void swap_by_value(int i, int j)<br>
+                    {<br>
+                        &emsp;&emsp;int temp;<br><br>
+                        &emsp;&emsp;temp = i;<br>
+                        &emsp;&emsp;i = j;<br>
+                        &emsp;&emsp;j = temp;<br>
+                    }<br><br>
+                    void swap_by_reference(int &i, int &j)<br>
+                    {<br>
+                        &emsp;&emsp;int temp;<br><br>
+                        &emsp;&emsp;temp = i;<br>
+                        &emsp;&emsp;i = j;<br>
+                        &emsp;&emsp;j = temp;<br>
+                    }<br><br>
+                    void swap_by_pointer(int *i, int *j)<br>
+                    {<br>
+                        &emsp;&emsp;int temp;<br><br>
+                        &emsp;&emsp;temp = *i;<br>
+                        &emsp;&emsp;*i = *j;<br>
+                        &emsp;&emsp;*j = temp;<br>
+                    }
+                </code>
+                        <p>Συμπληρώστε τις τελικές τιμές των μεταβλητών αφού εκτελεστεί το πρόγραμμα</p>
+                        <table>
+                            <tr>
+                                <td>a:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>b:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>c:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>d:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>e:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                            <tr>
+                                <td>f:</td>
+                                <td><input type="text" name="answers[]" size="5"></td>
+                            </tr>
+                        </table><br>
+
+                        <h3>9. Αντιστοίχιση</h3>
+                        <p>Έστω η κλάση student του προηγούμενου προγράμματος. Αντιστοιχίστε τις μεθόδους της κλάσης με
+                            την κατάλληλη περιγραφή</p>
+                        <table class="table-type3">
+                            <tr>
+                                <td>student();</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>a. Υπερφόρτωση του μεταθεματικού τελεστή ++</td>
+                            </tr>
+                            <tr>
+                                <td>void operator++();</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>b. Default κατασκευαστής</td>
+                            </tr>
+                            <tr>
+                                <td>student(const student &obj);</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>c. Υπερφόρτωση του προθεματικού τελεστή ++</td>
+                            </tr>
+                            <tr>
+                                <td>void operator++(int);</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>d. Καταστροφέας</td>
+                            </tr>
+                            <tr>
+                                <td>~student()</td>
+                                <td><select name="answers[]">
+                                        <option value="a">a</option>
+                                        <option value="b">b</option>
+                                        <option value="c">c</option>
+                                        <option value="d">d</option>
+                                        <option value="e">e</option>
+                                    </select></td>
+                                <td>e. Κατασκευαστής αντιγράφου</td>
+                            </tr>
+                        </table><br>
+                        <br><br><br>
+                        <!--
+                        <div id="submit-button"><input type="submit" value="Υποβολή"></div>
+                        -->
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Υποβολή</button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../javascript/bootstrap-js" type="text/javascript"></script>
+    <script src="../javascript/disconnect-button.js" type="text/javascript"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+#chapter-end-menu li:last-of-type a {
+    pointer-events: none;
+    background-color: grey;
+}
+
+#last_chap{
+    pointer-events: none;
+}

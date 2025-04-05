@@ -1,0 +1,538 @@
+
+
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <title>Κεφάλαιο 1ο</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="../images/logo.png">
+       
+
+        <link rel="stylesheet" href="../styles/chapters-style.css">
+
+        <!--<link rel="stylesheet" href="../styles/bootstrap/bootstrap.min.css" >-->
+        <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css" >
+        <link rel="stylesheet" href="../styles/chapter1-style.css">
+
+      
+    </head>
+    <body>
+        <header>
+           
+            <h1 id="title">Ο Κόσμος της C++</h1>
+            <a href="../main_menu.php"><img id="logo" src="../images/logo2.jpg"></a>
+           <!--<button id="disconnect">Αποσύνδεση</button>-->
+           <div id="menu" class="top-menu">
+   
+            <a href="../statistics.php" id="statistics">Στατιστικά</a>
+            <a href="../logout.php" id="disconnect">Αποσύνδεση</a>
+        </div>
+
+        </header>
+
+        
+        <!--
+        <nav id="nav-menu">
+          
+            <ul id="chapter-menu">
+                <li><a id="menu-chapter1" >Κεφάλαιο 1</a></li>
+                <li><a id="menu-chapter2" href="../chapter2/chapter2.html">Κεφάλαιο 2</a></li>
+                <li><a id="menu-chapter3" href="../chapter3/chapter3.html">Κεφάλαιο 3</a></li>
+                <li><a id="menu-chapter4" href="../chapter4/chapter4.html">Κεφάλαιο 4</a></li>
+                <li><a id="menu-chapter5" href="../chapter5/chapter5.html">Κεφάλαιο 5</a></li>
+            </ul>
+        </nav> 
+        -->
+
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item" id="current_chapter">
+                  <a class="nav-link disabled">Κεφάλαιο 1</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../chapter2/chapter2.html">Κεφάλαιο 2</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../chapter3/chapter3.html">Κεφάλαιο 3</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../chapter4/chapter4.html">Κεφάλαιο 4</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../chapter5/chapter5.html">Κεφάλαιο 5</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        
+        <aside id="nav-bar">
+            <h2>Πίνακας Περιεχομένων</h2>
+            <ol>
+                <li><a href="#section1">Σύντομη ιστορική αναδρομή</a></li>
+                <li><a href="#section2">Το πρώτο μας πρόγραμμα</a></li>
+                <li><a href="#section3">Τύποι δεδομένων</a></li>
+                <li><a href="#section4">Είσοδος-Έξοδος</a></li>
+                <li><a href="#section5">Τελεστές</a></li>
+                <ol>
+                    <li><a href="#section5_1">Αριθμητικοί τελεστές</a></li>
+                    <li><a href="#section5_2">Σχεσιακοί τελεστές</a></li>
+                    <li><a href="#section5_3">Λογικοί τελεστές</a></li>
+                </ol>
+            </ol>
+        </aside>
+    
+    
+
+    <!--
+    <aside class="row" id="nav-bar">
+        <h2>Πίνακας Περιεχομένων</h2>
+
+        <div class="col-6">
+          <nav class=" pe-4 ">align-items-stretch h-100 flex-column border-end
+            <nav class="nav  "> flex-column nav-pills
+            <ol>
+              <li><a class="nav-link" href="#section1">Σύντομη ιστορική αναδρομή</a></li>
+              <li><a class="nav-link" href="#section2">Το πρώτο μας πρόγραμμα</a></li>
+              <li><a class="nav-link" href="#section3">Τύποι δεδομένων</a></li>
+              <li><a class="nav-link" href="#section4">Είσοδος-Έξοδος</a></li>
+              <li><a class="nav-link" href="#section5">Τελεστές</a></li>
+              <nav class="nav nav-pills ">flex-column
+                <ol><li><a class="nav-link ms-3 my-1" href="#section5_1">Αριθμητικοί τελεστές</a></li>
+                    <li><a class="nav-link ms-3 my-1" href="#section5_2">Σχεσιακοί τελεστές</a></li>
+                    <li><a class="nav-link ms-3 my-1" href="#section5_3">Λογικοί τελεστές</a></li>
+                </ol>
+                
+               </ol>
+              </nav>
+            </nav>
+          </nav>
+        </div>
+    </aside> 
+-->
+
+        <main>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-auto col-md-auto col-sm-auto">
+                   
+              
+            <h1>Κεφάλαιο 1ο - Εισαγωγή</h1>
+
+            <section id="section1">
+                <h2>1&rpar; Σύντομη ιστορική αναδρομή</h2>
+                <p> Η C++ είναι μία αντικειμενοστραφής γλώσσα προγραμματισμού η οποία δημιουργήθηκε το 1979 από τον Bjarne Stroustrup. Το αρχικό της όνομα ήταν "C with classes" καθώς αποτελεί υπερσύνολο της
+                    C ενώ 5 χρόνια αργότερα μετονομάστηκε σε "C++". Κύριο χαρακτηριστικό της γλώσσας είναι η οργάνωση των δεδομένων και των λειτουργιών σε κλάσεις. Τα αντικείμενα είναι στιγμιότυπα των κλάσεων
+                    αυτών και αποτελούν το κύριο δομικό στοιχείο της γλώσσας. Επιπρόσθετα χαρακτηριστικά της C++ είναι τα εξής:<br>
+                    <ul>
+                        <li><span class="bold">Ενθυλάκωση:</span> Οργάνωση των δεδομένων και των συναρτήσεων της κλάσης, ώστε να επιτυγχάνεται απόκρυψη πληροφορίας</li>
+                        <li><span class="bold">Πολυμορφισμός:</span> Η δυνατότητα της γλώσσας να χρησιμοποιεί το ίδιο συμβολικό όνομα για διαφορετικές χρήσεις</li>
+                        <li><span class="bold">Κληρονομικότητα:</span> Η δυνατότητα των κλάσεων να κληρονομούνται από άλλες κλάσεις και να προσθέτουν την δική τους λειτουργικότητα</li>
+                    </ul>
+
+                    <figure>
+                        <img src="../images/Stroustrup.jpg">
+                        <figcaption>
+                            Ο κουλ δημιουργός της C++ Bjarne Stroustrup
+                        </figcaption>
+                    </figure>
+                </p>
+            </section>
+
+            <section id="section2">
+                <h2>2&rpar; Το πρώτο μας πρόγραμμα</h2>
+                <code class="text-dark">
+                    // Το πρώτο μας πρόγραμμμα<br><br>
+                    #include &lt;iostream&gt;<br><br>
+                    using namespace std;<br><br>
+                    int main()<br>
+                    {<br>
+                        &emsp;&emsp;cout&lt;&lt;"Hello C++ World\n";<br>
+                        &emsp;&emsp;return 0;<br>
+                    }
+
+                </code>
+
+                <h3>Επεξήγηση εντολών</h3>
+                <p>
+                    <span class="bold">Γραμμή 1η:</span> Η πρώτη γραμμή αποτελεί ένα σχόλιο. Τα σχόλια μίας γραμμής ξεκινάνε με τους χαρακτήρες "//" ενώ τα σχόλια πολλαπλών γραμμών ξεκινάνε με τους χαρακτήρες
+                    "/*" και τερματίζουν στους χαρακτήρες "*/"
+                </p>
+                <p>
+                    <span class="bold">Γραμμή 3η:</span> Οι εντολές που ξεκινούν με "#" αποτελούν οδηγίες προς τον προεπεξεργαστή. Στο συγκεκριμένο παράδειγμα το πρόγραμμα ζητάει από τον προεπεξεργαστή να συμπεριλάβει την βιβλιοθήκη
+                    iostream η οποία περιέχει αντικείμενα και συναρτήσεις για την είσοδο και την έξοδο δεδομένων.
+                </p>
+                <p><span class="bold">Γραμμή 5η:</span> Χρήση του χώρου ονομάτων std. Ο χώρος ονομάτων std περιέχει πληθώρα συναρτήσεων, κλάσεων και αντικειμένων</p>
+                <p><span class="bold">Γραμμή 7η:</span> Ορίζεται η κύρια συνάρτηση του προγράμματος δηλαδή το σημείο από το οποίο θα εκκινήσει η εκτέλεση του. Η συνάρτηση main έχει πάντα τύπο επιστροφής int</p>
+                <p>
+                    <span class="bold">Γραμμή 9η:</span> Εκτύπωση της συμβολοσειράς "Hello C++ World" μέσω του αντικειμένου cout το οποίο ορίζεται στο χώρο ονομάτων std της βιβλιοθήκης iostream. Ο χαρακτήρας
+                    διαφυγής "\n" δηλώνει την αλλαγή γραμμής
+                </p>
+                <p><span class="bold">Γραμμή 10η:</span> Τερματισμός προγράμματος επιστρέφοντας στο λειτουργικό σύστημα την τιμή 0. Η τιμή 0 ενημερώνει το λειτουργικό σύστημα ότι το πρόγραμμα τερματίστηκε κανονικά</p>
+            </section>
+
+            <section id="section3"></section>
+                <h2>3&rpar; Τύποι δεδομένων</h2>
+
+                    <p>Στη γλώσσα προγραμματισμού C++, υπάρχουν διάφοροι τύποι δεδομένων που χρησιμοποιούνται για να αποθηκεύσουν και να επεξεργαστούν δεδομένα. 
+                    Ορισμένοι από τους βασικούς τύπους δεδομένων στη C++ περιλαμβάνουν:</p>
+                
+                    <p><span class="bold">char:</span> Αυτός είναι ο τύπος δεδομένων για την αποθήκευση ενός χαρακτήρα. 
+                        Για παράδειγμα: char letter = 'A';
+                    </p>
+                    
+                    
+
+                    <p><span class="bold">bool:</span> Αυτός είναι ο τύπος δεδομένων για τις λογικές τιμές true και false. Χρησιμοποιείται για την αναπαράσταση λογικών συνθηκών. 
+                        Για παράδειγμα: bool is_true = true;
+                    </p>
+
+                    <p><span class="bold">int:</span> Αυτός είναι ο τύπος δεδομένων για τους ακέραιους αριθμούς. 
+                        Χρησιμοποιείται για την αποθήκευση των θετικών και αρνητικών ακεραίων. 
+                        Για παράδειγμα: 
+                        int a = 10;
+                    </p>
+
+                    <p> <span class="bold">short (int):</span>  Ο τύπος short int, συνήθως απλά συντομογραφείται ως short, χρησιμοποιείται για την αποθήκευση ακεραίων αριθμών με μικρότερη ακρίβεια από τον τύπο int. 
+                        Η ακρίβεια του short μπορεί να διαφέρει ανάλογα με τον μεταγλωττιστή, αλλά συνήθως έχει μέγεθος 16 bits(2 bytes), 
+                        οπότε μπορεί να αποθηκεύσει ακέραιους αριθμούς από -32,768 έως 32,767.
+
+                        Για παράδειγμα:
+                        short small_integer = 100;
+                    </p>
+
+                   
+
+                   
+                    <p> <span class="bold">long (int):</span>  Ο τύπος long int, συνήθως συντομογραφείται ως long, χρησιμοποιείται για την αποθήκευση ακεραίων αριθμών με μεγαλύτερη ακρίβεια από τον τύπο int. 
+                        Ο long έχει τουλάχιστον 32 bits(4 bytes) μεγέθος και μπορεί να αποθηκεύσει ακέραιους αριθμούς από περίπου -2,147,483,648 έως 2,147,483,647. 
+                        
+                        Για παράδειγμα:
+                        long int big_number = 2147483648L;
+                    </p>
+
+                    
+                   
+                    <p> <span class="bold">float:</span>  Αυτός είναι ο τύπος δεδομένων για τους κινητούς δεκαδικούς αριθμούς με μικρότερη ακρίβεια. 
+                        Για παράδειγμα: float pi = 3.14;
+                    </p>
+                    
+                   
+                    <p> <span class="bold">double:</span>  Αυτός είναι ο τύπος δεδομένων για τους κινητούς δεκαδικούς αριθμούς με υψηλότερη ακρίβεια από το float. 
+                        Για παράδειγμα: double e = 2.71828;
+                    </p>
+
+                    <p> <span class="bold">long double:</span>  Ο τύπος long double χρησιμοποιείται για την αποθήκευση δεκαδικών αριθμών με μεγαλύτερη ακρίβεια από τον τύπο double. 
+                        Η ακρίβεια του long double είναι εξαιρετικά υψηλή και μπορεί να χρησιμοποιηθεί για εφαρμογές που απαιτούν ακριβείς υπολογισμούς. 
+    
+                        Για παράδειγμα:
+                        long double pi = 3.14159265358979323846L;
+                    </p>
+
+                    <p>Όσων αφορά τους τύπους long int και long double παρατειρούμε πως στο τέλος τους οι αριθμοί έχουμε ένα κεφαλαίο L, αυτό υπάρχει για να σηματοδοτεί
+                        στον μεταγλωττιστή πως είναι τέτοιου τύπου (long).
+
+                        Είναι σημαντικό να σημειωθεί ότι το ακριβές μέγεθος και ακρίβεια αυτών των τύπων μπορεί να διαφέρει ανάλογα με τον μεταγλωττιστή και το σύστημα. 
+                        Καλό είναι να χρησιμοποιείτε αυτούς τους τύπους με προσοχή ανάλογα με τις ανάγκες του προγράμματός σας.
+                    </p>
+                   
+                   
+                    <p> 
+                        Επιπλέον, η C++ επιτρέπει τη δημιουργία προσαρμοσμένων τύπων δεδομένων με τη χρήση των δομών (structs) 
+                        και των κλάσεων (classes) για να οργανώνετε τα δεδομένα σας σε πιο πολύπλοκες δομές. 
+                        Αυτό σας επιτρέπει να δημιουργήσετε προσαρμοσμένες τύπους δεδομένων που αντιπροσωπεύουν περισσότερο σύνθετες έννοιες.
+                    </p>
+                    <p>
+                        Τέλος παραπάνω οι τύποι δεδομένων απευθύνονται σε μεταβλητές.
+                        Στην C++ όμως υπάρχουν και σταθερές των ίδιων τύπων δεδομένων. 
+                        Δηλώνονται όπως και οι μεταβλητές απλά με τη λέξη κλειδί const στο μπροστινό μέρος της δήλωσης.
+                        Για παράδειγμα:
+                    </p>
+                    <code class="text-dark">
+                     const int x = 5; // δήλωση και αρχικοποίηση 
+                    </code>
+
+                    <p>
+                        Στην πάνω δήλωση λοιπόν το 'x' θα παραμείνει σταθερό με τιμή 5 κατά τη διάρκεια όλης της εκτέλεσης ενός
+                        προγράμματος. Αν ο προγραμματιστής προσπαθήσει να την αλλάξει μετά την αρχικοποίηση της 
+                        θα υπάρξει πρόβλημα κατά τη μεταγλώττιση του προγράμματος.
+                    </p>
+
+                    
+                    
+                <table class="text-center center">
+                    <tr class="text-center"><th>Όνομα τύπου</th><th>Bytes</th><th>Εύρος</th></tr>
+                    <tr><td>char</td><td>1</td><td>singed: -128 έως 127 | unsigned: 0 έως 255</td></tr>
+                    <tr><td>bool</td><td>1</td><td>true ή false</td></tr>
+                    <tr><td>short</td><td>2</td><td>singed: -32768 έως 32767 | unsigned: 0 έως 65535</td></tr>
+                    <tr><td>int</td><td>2 ή 4</td><td>signed 2,147,483,647 (2^31 - 1) εώς -2,147,483,648 (-2^31).</td></tr>
+                    <tr><td>long</td><td>4</td><td>singed: -2147483648 έως 2147483647 | unsigned: 0 έως 4294967295</td></tr>
+                    <tr><td>float</td><td>4</td><td>1.17549e-38(1.17549*10^-38) έως 3.40282e+38(3.40282*10^38)</td></tr>
+                    <tr><td>double</td><td>8</td><td>2.22507e-308 έως 1.79769e+308</td></tr>
+                    <tr><td>long double</td><td>10</td><td>ακρίβεια δεκαδικών ψηφίων , περίπου διπλάσια από αυτή του double</td></tr>
+                    
+                </table>
+
+                <p> Αξίζει να σημειώσουμε ότι αυτές οι τιμές μπορεί να ποικίλουν ανάλογα με το λειτουργικό σύστημα και την αρχιτεκτονική 
+                    του υπολογιστή σας. Για ακριβείς τιμές σε μια συγκεκριμένη πλατφόρμα, μπορείτε να ανατρέξετε στην τεκμηρίωση της πλατφόρμας 
+                    σας ή να χρησιμοποιήσετε τις σταθερές std::numeric_limits που παρέχονται από τη βιβλιοθήκη 'limits' στη C++.</p>
+            </section>
+
+            <section id="section4">
+                <h2>4&rpar; Είσοδος-Έξοδος</h2>
+
+                <p>Στη C++, η είσοδος (input) και η έξοδος (output) χειρίζονται κυρίως μέσω των αντικειμένων cin και cout, 
+                    τα οποία προέρχονται από τη βιβλιοθήκη iostream. Ας δούμε πώς μπορείτε να χρησιμοποιήσετε αυτά τα αντικείμενα 
+                    για είσοδο και έξοδο.
+                    </p>
+
+                    <p> <span class="bold">Έξοδος με το cout:</span></p>
+                   
+                    Το cout χρησιμοποιείται για την εκτύπωση δεδομένων στην οθόνη.
+                     Χρησιμοποιείται συνήθως με τον τελεστή &lt;&lt;. 
+                     
+                     <p>Εδώ είναι ένα παράδειγμα:</p>
+                    <pre>
+                     <code>
+                        #include &lt;iostream&gt;
+
+                        int main() {
+                            std::cout &lt;&lt; "Αυτό είναι ένα μήνυμα." &lt;&lt; std::endl;
+                            return 0;
+                        }
+                        
+                    </code>
+                    </pre>
+                    Στο παραπάνω παράδειγμα, το κείμενο "Αυτό είναι ένα μήνυμα." εκτυπώνεται στην οθόνη.
+                    </p>
+            
+
+                  <p> 
+                    <span class="bold">Είσοδος με το cin:</span>
+                    
+                    </p>
+                    <p>
+                    Το cin χρησιμοποιείται για τη λήψη εισόδου από τον χρήστη. 
+                    Χρησιμοποιείται με τον τελεστή &gt;&gt;.
+                    </p>
+                     
+                    <p>Παράδειγμα:</p>
+                     
+                    <pre>
+                     <code>
+                        int main() {
+                            int num;
+                            std::cout &lt;&lt; "Παρακαλώ εισάγετε έναν ακέραιο αριθμό: ";
+                            std::cin &gt;&gt; num;
+                            
+                            std::cout &lt;&lt; "Εισάγατε τον αριθμό: " &lt;&lt; num &lt;&lt; std::endl;
+                            return 0;
+                        }
+                        
+                    </code>
+                    </pre>
+                    Στο παραπάνω παράδειγμα, ο χρήστης καλείται να εισάγει έναν ακέραιο αριθμό, έστω το 3, 
+                    ο οποίος αποθηκεύεται στη μεταβλητή num και στη συνέχεια εκτυπώνεται στην οθόνη.
+                    
+                    <p>Αυτό είναι ένα απλό παράδειγμα της χρήσης των cin και cout. </p>
+                    Σε πιο πολύπλοκα προγράμματα, μπορείτε να χρησιμοποιήσετε αυτά τα αντικείμενα για να διαχειριστείτε 
+                    πολλαπλές εισόδους και εξόδους.
+                    </p>
+            
+            </section>
+
+            <section id="section5">
+                <h2>5&rpar; Τελεστές</h2>
+                <p>Στη C++, υπάρχουν διάφοροι τύποι τελεστών που χρησιμοποιούνται για διάφορους σκοπούς. 
+                    Ας δούμε τις τρεις κύριες κατηγορίες τελεστών.
+                    
+                    Αρχικά έχουμε τους αριθμητικούς τελεστές οι οποίοι χρησιμοποιούνται για αριθμητικές πράξεις πάνω σε ακέραιους και δεκαδικούς αριθμούς. 
+                    Ορισμένοι από τους αριθμητικούς τελεστές περιλαμβάνονται στο παρακάτω πινακάκι.
+                </p>
+                <h3 id="section5_1">5.1&rpar; Αριθμητικοί τελεστές</h3>
+                
+                    <table class="center">
+                        <tr class="text-center"><th>Τελεστής</th><th>Περιγραφή</th><th>Παράδειγμα</th></tr>
+                        <tr><td>+</td><td>Πρόσθεση</td><td>x + y</td></tr>
+                        <tr><td>-</td><td>Αφαίρεση</td><td>x - y</td></tr>
+                        <tr><td>*</td><td>Πολλαπλασιασμός</td><td>x * y</td></tr>
+                        <tr><td>/</td><td>Διαίρεση</td><td>x / y</td></tr>
+                        <tr><td>++(προθεματικό)</td><td>Αύξηση κατά ένα και επιστροφή της νέας τιμής</td><td>++x</td></tr>
+                        <tr><td>++(μεταθεματικό)</td><td>Αύξηση κατά ένα και επιστροφή της παλιάς τιμής</td><td>x++</td></tr>
+                        <tr><td>--(προθεματικό)</td><td>Μείωση κατά ένα και επιστροφή της νέας τιμής</td><td>--x</td></tr>
+                        <tr><td>--(μεταθεματικό)</td><td>Μείωση κατά ένα και επιστροφή της παλιάς τιμής</td><td>x--</td></tr>
+                    </table>
+                    <p>Έστω παράδειγμα του τελεστή της πρόσθεσης:</p>
+                      <pre>
+                       <code>
+                        int a = 5;									
+                        int b = 3;
+                        int result = a + b; // Πρόσθεση
+                        </code>
+                        </pre>
+                        Αν εμφανίσουμε τώρα την τιμή της μεταβλητής result τότε θα έχει το αποτέλεσμα της πρόσθεσης των a,b δηλαδή 3,5: 3+5 = 8. 
+                        Άρα, το result θα έχει την τιμή 8.
+                        Αντίστοιχα χρησιμοποιούμε και τους υπόλοιπους αριθμητικούς τελεστές. 
+                       
+                    </p>
+
+                <h3 id="section5_2">5.2&rpar; Σχεσιακοί τελεστές</h3>
+                <p>
+                    Οι σχεσιακοί τελεστές χρησιμοποιούνται για να συγκρίνουν τιμές και επιστρέφουν αποτελέσματα true ή false (αληθές ή ψευδές , 
+                    όπου 0 είναι false και ό,τι δεν είναι θεωρείτε true.Συνήθως το 1 είναι το true.). 
+                    Οι σχεσιακοί τελεστές φαίνονται στον ακόλουθο πίνακα:
+                </p>
+                    <table class="center">
+                        <tr class="text-center"><th>Τελεστής</th><th>Περιγραφή</th><th>Παράδειγμα</th></tr>
+                        <tr><td>==</td><td>Ισούται με</td><td>x == y</td></tr>
+                        <tr><td>!=</td><td>Δεν ισούται με</td><td>x != y</td></tr>
+                        <tr><td>&gt;</td><td>Μεγαλύτερο από</td><td>x &gt; y</td></tr>
+                        <tr><td>&lt;</td><td>Μικρότερο από</td><td>x &lt; y</td></tr>
+                        <tr><td>&gt;=</td><td>Μεγαλύτερο από ή ίσο</td><td>x &gt;= y</td></tr>
+                        <tr><td>&lt;=</td><td>Μικρότερο από ή ίσο</td><td>x &lt;= y</td></tr>
+                    </table>
+                    <p>Έστω παράδειγμα του τελεστή &gt; (μεγαλύτερο από):</p>
+                    <pre>
+                     <code>
+                        int a = 5;
+                        int b = 3;
+                        bool r = a &gt; b; // Είναι το a μεγαλύτερο από το b;
+                      </code>
+                      </pre>
+                      Εδώ το a είναι το 5 και b το 3 οπότε ναι η σύγκριση είναι αληθής και άρα η τιμή της bool (boolean) μεταβλητής r
+                      θα έχει ως τιμή 'true'.
+                     
+                  </p>
+
+                <h3 id="section5_3">5.3&rpar; Λογικοί τελεστές</h3>
+                <p>
+                    Οι λογικοί τελεστές χρησιμοποιούνται για λογικές πράξεις, όπως ο συνδυασμός δυο ή περισσότερων συνθηκών. 
+                    Οι λογικούς τελεστές περιλαμβάνονται στον παρακάτω πίνακα:
+                </p>
+                    <table class="center">
+                        <tr class="text-center"><th>Τελεστής</th><th>Περιγραφή</th><th>Παράδειγμα</th></tr>
+                        <tr><td>&&</td><td>Λογικό και</td><td>x &lt; 5 && y &gt; 10</td></tr>
+                        <tr><td>||</td><td>Λογικό ή</td><td>x &lt; 5 || y &gt; 10</td></tr>
+                        <tr><td>!</td><td>Άρνηση</td><td>!(x &lt; 5 && y &gt; 10)</td></tr>
+                    </table>
+
+                <p>
+                    Έστω παράδειγμα χρήσης αυτών των τελεστών σε απλό κώδικα με bool μεταβλητές:
+                </p>
+                <pre>
+                    <code>
+                    bool t = true;
+                    bool f = false;
+                    bool res = t && f; // Λογική σύζευξη (AND)
+                    </code>
+                </pre>
+                <p>
+                 Εδώ αν εμφανίσουμε την τιμή του res θα δούμε πως έχει την τιμή false εφόσον true AND false = false.
+                 Αντίστοιχα μπορούμε να τους χρησιμοπιήσουμε σε συνδυασμό με τους σχεσιακούς τελεστές σε εκφράσεις με αριθμούς
+                 (ή χαρακτήρες και αλφαρηθμητικά που θα δούμε στη συνέχεια σε επόμενο κεφάλαιο.) όπως φαίνονται στα παραδείγματα των πινάκων στην τελευταία στήλη.
+                 Βέβαια η αλήθεια είναι πως αυτό το παράδειγμα δεν είναι πρακτικό εφόσον στην πραγματικότητα δεν χρησιμοποιούμε αυτούς τους τελεστές
+                 με αυτόν τον τρόπο αλλά σε &lt;&lt;συνθήκες&gt;&gt; οι οποίες είναι μέρος των δομών ελέγχου και επανάληψης που θα δούμε σε επόμενο κεφάλαιο.
+                </p>
+                    Οι τελεστές αυτοί είναι βασικοί για τον προγραμματισμό στη C++ και χρησιμοποιούνται ευρέως για να εκτελέσουν διάφορους τύπους πράξεων και συγκρίσεις στον κώδικα.
+              
+            </section>
+            </div>
+        </main>
+
+        <footer>
+            <!--
+            <ul class="navbar navbar-expand-lg bg-body-tertiary" id="chapter-end-menu">
+                <li><a>&larr; Προηγούμενο Κεφάλαιο</a></li>
+                <li><a href="../main_menu.php">Αρχικό Μενού</a></li>
+                <li><a href="../chapter2/chapter2.html">Επόμενο Κεφάλαιο &rarr;</a></li>
+            </ul>
+        -->
+<!--
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+               <div class="row">
+                <div class="col text-left">
+                    <a class="navbar-brand">Προηγούμενο Κεφάλαιο</a>
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto">
+                            <div class="col text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../main_menu.php">Αρχικό Μενού</a>
+                        </li>
+                    </div>
+                    <div class="col text-right">
+                        <li class="nav-item">
+                        <a class="nav-link" href="../chapter2/chapter2.html">Επόμενο κεφάλαιο</a>
+                    </li>
+                </div>
+                        
+                  
+                </ul>
+              </div>
+            </div>
+        </div>
+          </nav>-->
+          <!--
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+              <button class="btn btn-primary mr-2">Προηγούμενο Κεφάλαιο</button>
+              <button class="btn btn-primary mx-auto">Αρχική Σελίδα</button>
+              <button class="btn btn-primary ml-2">Επόμενο Κεφάλαιο</button>
+            </div>
+          </nav>
+        -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item" id="last_chap">
+                  <a class="nav-link disabled">Προηγούμενο Κεφάλαιο</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../main_menu.php">Αρχικό Μενού</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="../chapter2/chapter2.html">Επόμενο Κεφάλαιο</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </footer>
+
+        <script src="../javascript/disconnect-button.js"  type="text/javascript"></script>
+        <script src="../javascript/bootstrap-js/bootstrap.js"  type="text/javascript"></script>
+     
+
+    </body>
+</html>

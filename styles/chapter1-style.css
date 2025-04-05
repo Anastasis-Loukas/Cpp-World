@@ -1,0 +1,42 @@
+#chapter-end-menu li:first-of-type a {
+    pointer-events: none;
+    background-color: grey;
+ 
+   
+}
+
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+table, table th, table td {
+    border: 2px solid black;
+
+  
+}
+
+td,table th {
+    text-align: center;
+    
+}
+
+figure {
+    text-align: center;
+    
+}
+
+#menu-chapter1{
+    background-color:gray;
+    pointer-events: none;
+
+}
+
+
+#last_chap{
+    pointer-events: none;
+}
+
+

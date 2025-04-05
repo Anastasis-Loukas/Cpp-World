@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+}
+
+#return-button {
+    font-size: 28px;
+    text-align: center;
+    cursor: pointer;
+    background-color: skyblue;
+    color: black;
+    transition-duration: 0.4s;
+}
+
+#return-button:hover {
+    background-color: black;
+    color: white;
+    font-size: 34px;
+}

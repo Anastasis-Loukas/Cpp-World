@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Κεφάλαιο 3ο</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="../images/logo.png">
+    <link rel="stylesheet" href="../styles/chapters-style.css">
+    <link rel="stylesheet" href="../styles/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="../styles/chapter3-style.css">
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Ο Κόσμος της C++</h1>
+        <a href="../main_menu.php"><img id="logo" src="../images/logo2.jpg"></a>
+        <!-- <button id="disconnect">Αποσύνδεση</button>-->
+        <div id="menu" class="top-menu">
+
+
+            <a href="../statistics.php" id="statistics">Στατιστικά</a>
+            <a href="../logout.php" id="disconnect">Αποσύνδεση</a>
+        </div>
+    </header>
+    <!--
+        <nav id="nav-menu">
+            <ul id="chapter-menu">
+                <li><a id="menu-chapter1" href="../chapter1/chapter1.html">Κεφάλαιο 1</a></li>
+                <li><a id="menu-chapter2" href="../chapter2/chapter2.html">Κεφάλαιο 2</a></li>
+                <li><a id="menu-chapter3" >Κεφάλαιο 3</a></li>
+                <li><a id="menu-chapter4" href="../chapter4/chapter4.html">Κεφάλαιο 4</a></li>
+                <li><a id="menu-chapter5" href="../chapter5/chapter5.html">Κεφάλαιο 5</a></li>
+            </ul>
+        </nav>
+    -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../chapter1/chapter1.html">Κεφάλαιο 1</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../chapter2/chapter2.html">Κεφάλαιο 2</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item" id="current_chapter">
+                    <a class="nav-link disabled">Κεφάλαιο 3</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../chapter4/chapter4.html">Κεφάλαιο 4</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="../chapter5/chapter5.html">Κεφάλαιο 5</a>
+                </li>
+              </ul>
+        </div>
+    </nav>
+
+    <aside id="nav-bar">
+        <h2>Πίνακας Περιεχομένων</h2>
+        <ol>
+            <li><a href="#section1">Δείκτες</a></li>
+            <li><a href="#section2">Αναφορές</a></li>
+            <li><a href="#section3">Δυναμική δέσμευση μνήμης</a></li>
+        </ol>
+    </aside>
+
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-auto col-md-auto col-sm-auto">
+                    <h1>Κεφάλαιο 3ο - Δείκτες και Αναφορές</h1>
+
+                    <section id="section1">
+                        <h2>1&rpar; Δείκτες(pointers)</h2>
+
+                        <p>Τι είναι οι δείκτες;</p>
+                        <p>Οι δείκτες είναι μεταβλητές που αποθηκεύουν τη διεύθυνση μνήμης μιας μεταβλητής.
+                            Αναφέρονται συνήθως σε μεταβλητές αλλά και σε αντικείμενα κλάσεων.</p>
+
+
+                        <span class="bold"> Δήλωση και αρχικοποίηση δείκτη: </span>
+                        <p>Για να δηλώσετε ένα δείκτη, χρησιμοποιείτε τον τύπο δείκτη (pointer type) με έναν τελεστή *.
+                        </p>
+                        <pre>
+                            <code>
+                        int x = 10;  // Δημιουργία μιας ακέραιας μεταβλητής
+                        int* ptr;     // Δημιουργία ενός δείκτη προς ακέραιο
+                        ptr = &amp;x;     // Ο δείκτης δείχνει στη διεύθυνση μνήμης της μεταβλητής x με τον τελεστή & 
+                        </code>
+                         </pre>
+
+
+                        <span class="bold"> Πρόσβαση στην τιμή της μεταβλητής που δείχνει ο δείκτη: </span>
+                        <p>Για να αποκτήσετε πρόσβαση στην τιμή που δείχνει ένας δείκτης, χρησιμοποιείτε τον τελεστή
+                            αποαναφοροποίησης (*).</p>
+                        <pre><code>
+                            int y = *ptr;  // Αντιστοίχιση της τιμής στο σημείο που δείχνει ο ptr (τιμή του x = 10) στην y
+                           </code></pre>
+
+                        <p>Τώρα, η τιμή του y είναι 10, η τιμή της μεταβλητής x.</p>
+                        <p>
+                            Αν δεν χρησιμοποιήσουμε τον τελεστή (*) τότε η ακέραια μεταβλητή θα πάρει ως τιμή μια
+                            διεύθυνση μνήμης
+                            στην οποία βρίσκεται ένας ακέραιος.
+                        </p>
+                        <pre>
+                            <code>int y = ptr;  // Αντιστοίχιση της τιμής του δείκτη(διεύθυνση του x) στη μεταβλητή y ως ακέραιος αριθμός</code>
+                        </pre>
+
+
+
+
+
+
+                        <p>Παράδειγμα Κώδικα με δείκτη σε ακέραιο:</p>
+
+                        <pre>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+
+                        int main() {
+                            int x = 42;
+                            int* ptr = &amp;x;  // Δείκτης προς τη μεταβλητή x
+
+                            cout &lt;&lt; "Η τιμή της x: " &lt;&lt; x &lt;&lt; endl;
+                            cout &lt;&lt; "Ο δείκτης ptr δείχνει στη διεύθυνση: " &lt;&lt; ptr &lt;&lt; endl;
+                            cout &lt;&lt; "Η τιμή που δείχνει ο δείκτης ptr: " &lt;&lt; *ptr &lt;&lt; endl;
+
+                            return 0;
+                        }
+                    </pre>
+
+
+
+                        <span class="bold"> Χρήση Δεικτών σε Συνδυασμό με Πίνακες: </span>
+                        <pre>
+                        #include &lt;iostream&gt;
+                        using namespace std;
+
+                        int main() {
+                            int numbers[5] = {1, 2, 3, 4, 5};
+                            int* ptr = numbers;  // Δημιουργία δείκτη προς τον πίνακα numbers
+
+                            // Χρήση δείκτη για πρόσβαση στα στοιχεία του πίνακα
+                            cout &lt;&lt; "Πίνακας numbers: ";
+                            for (int i = 0; i &lt; 5; i++) {
+                                cout &lt;&lt; *ptr &lt;&lt; " ";  // Χρήση του τελεστή (*) για να πάρουμε την τιμή που δείχνει ο δείκτης
+                                //δηλαδή τα στοιχεία του πίνακα numbers[]
+                                ptr++;  // Αυξάνουμε τον δείκτη για να προχωρήσουμε στο επόμενο στοιχείο (του πίνακα)
+                            }
+
+                            return 0;
+                        }
+                    </pre>
+
+
+
+
+                        <span class="bold"> Χρήση Δεικτών με Αλφαρηθμητικά: </span>
+                        <p>Στην C++, τα αλφαρηθμητικά είναι πίνακες χαρακτήρων, και μπορείτε να χρησιμοποιήσετε δείκτες
+                            για την πρόσβαση και τον έλεγχο τους.</p>
+                        <pre>
+                        char myString[] = "Hello";//string , πίνακας χαρακτήρων
+                        char* ptr = myString;  // Δημιουργία δείκτη προς το αλφαρηθμητικό
+
+                        cout &lt;&lt; *ptr &lt;&lt; endl;  // Εκτύπωση του πρώτου χαρακτήρα ('H') , ισοδύναμο με *(ptr+0) ,αρχή του πίνακα + 0 bytes
+                    </pre>
+                        <p>
+                            Τώρα λοιπόν που έχουμε μιλήσει και για πίνακες και για δείκτες, και την σχέση μεταξύ τους ,
+                            μπορούμε να δούμε τους δύο τρόπους
+                            χρήσης/προσπέλασης στοιχείων ενός απλού (εδώ , στατικού) πίνακα που στην πραγματικότητα
+                            είναι και αυτός δείκτης στο πρώτο στοιχείο του.
+                        </p>
+
+                        <u>Χρήση αγκύλων [] για την προσπέλαση του πίνακα:</u>
+
+                        <pre>
+                <code>
+                    #include <iostream>
+
+                        int main() {
+                            int numbers[5] = {1, 2, 3, 4, 5};
+                        
+                            // Χρήση επανάληψης for για προσπέλαση του πίνακα
+                            for (int i = 0; i &lt; 5; i++) {
+                                std::cout &lt;&lt; "Στοιχείο " &lt;&lt; i &lt;&lt; ": " &lt;&lt; numbers[i] &lt;&lt; std::endl;
+                            }
+                        
+                            return 0;
+                        }
+                </code>
+            </pre>
+
+                        <u>Χρήση του τελεστή αποαναφοροποίησης (*):</u>
+
+                        <pre>
+                <code>
+                    #include <iostream>
+
+                        int main() {
+                            int numbers[5] = {1, 2, 3, 4, 5};
+                        
+                            // Χρήση επανάληψης for για προσπέλαση του πίνακα
+                            for (int i = 0; i &lt; 5; i++) {
+                                std::cout &lt;&lt; "Στοιχείο " &lt;&lt; i &lt;&lt; ": " &lt;&lt; *(numbers + i) &lt;&lt; std::endl;
+                            }
+                        
+                            return 0;
+                        }
+                </code>
+            </pre>
+
+
+
+                    </section>
+
+                    <section id="section2">
+                        <h2>2&rpar; Αναφορές</h2>
+
+                        <p>
+                            Στη γλώσσα προγραμματισμού C++, οι αναφορές (references) είναι ένα ισχυρό χαρακτηριστικό που
+                            επιτρέπει τη δημιουργία "παραλλαγών"/"αντιγράφων"
+                            ενός μιας μεταβλητής ή αντικειμένου.
+                            Αυτό μας επιτρέπει να αναφέρομαστε σε μια μεταβλητή χρησιμοποιώντας έναν αναφορικό τελεστή
+                            (&)
+                            και να το χειριστούμε σαν να ήταν η ίδια η μεταβλητή.
+                        </p>
+
+                        <p>
+                            <u>Συγκεκριμένα, οι αναφορές έχουν τα εξής χαρακτηριστικά:</u>
+                            Οι αναφορές δηλώνονται με τον τελεστή & κατά τη διάρκεια της δήλωσης μιας μεταβλητής ή
+                            αντικειμένου(κλάσης).
+                            Δεν μπορούν να αλλάξουν στόχο: Μια αναφορά, αφού δηλωθεί, δεν μπορεί να ανατεθεί να
+                            αναφέρεται σε διαφορετικό αντικείμενο.
+                            Είναι "δεσμευμένη" στο αρχικό αντικείμενο που δηλώθηκε.
+                        </p>
+                        <p>
+                            Παράδειγμα:
+                        </p>
+
+                        <pre>
+                <code>
+                    include <iostream>
+
+                        int main() {
+                            int x = 10;
+                            int &ref = x; // Δημιουργία αναφοράς προς το x
+                        
+                            ref = 20; // Αλλαγή της τιμής του x μέσω της αναφοράς
+                        
+                            std::cout &lt;&lt; "x = " &lt;&lt; x &lt;&lt; std::endl; // Εκτύπωση της τιμής του x
+                            return 0;
+                        }
+                </code>
+            </pre>
+
+                        <p>
+                            Στο παραπάνω παράδειγμα, η μεταβλητή ref αναφέρεται στο αντικείμενο x,
+                            και οποιαδήποτε αλλαγή γίνει στην ref επηρεάζει και το x.
+                            Όταν εκτυπώνουμε το x, βλέπουμε ότι έχει την τιμή 20, που πήρε η ref πριν την εκτύπωση,
+                            αλλάζοντας έτσι και την x.
+
+                        </p>
+
+
+                    </section>
+
+                    <section id="section3">
+                        <h2>3&rpar; Δυναμική δέσμευση μνήμης</h2>
+
+                        <p> Η δυναμική δέσμευση μνήμης είναι μια σημαντική έννοια στον προγραμματισμό και αναφέρεται στη
+                            διαδικασία
+                            κατά την οποία, στην διάρκεια εκτέλεσης ενός προγράμματος, δεσμεύεται και απελευθερώνεται
+                            χώρος μνήμης δυναμικά.
+                            Αυτό δίνει την δυνατότητα στο πρόγραμμα να ανταποκρίνεται σε μεταβαλλόμενες ανάγκες για χώρο
+                            μνήμης.</p>
+
+                        <p>Οι γλώσσες προγραμματισμού που υποστηρίζουν δυναμική δέσμευση μνήμης, όπως η C++, παρέχουν
+                            διάφορους τρόπους
+                            για τη δέσμευση και την απελευθέρωση μνήμης κατά την εκτέλεση.</p>
+                        <p>
+                            Οι πιο κοινοί τρόποι είναι:
+                        </p>
+
+                        <ul>
+                            <li><strong>new</strong> και <strong>delete</strong> (στην C++) ή <strong>malloc</strong>
+                                και <strong>free</strong> (στην C): Με τη χρήση των αντίστοιχων εντολών, μπορείτε να
+                                δημιουργήσετε δυναμικά αντικείμενα ή πίνακες στη σωρό (heap memory)
+                                και να τα απελευθερώσετε όταν δεν τα χρειάζεστε πλέον.</li>
+
+                        </ul>
+
+                        <p>
+                            Η δυναμική δέσμευση μνήμης αφορά δέσμευση μνήμης για δείκτες και πίνακες δεσμέυοντας
+                            μία(απλός δείκτης) και περισσότερες θέσεις
+                            μνήμης αντίστοιχα(πίνακας)
+                        </p>
+
+                        <p>
+                            Χρήση των new και delete:
+                        </p>
+                        <ul>
+                            <li>Απλό new για δέσμευση μιάς μόνο θέσης μνήμης.
+                                <p>
+                                    Παράδειγμα:
+                                    <code style="color:black">int* x = new int;//μία θέση μνήμης για ακέραιο</code>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>new[n] για δέσμευση n θέσεων μνήμης κυρίως για πίνακες.
+                                <p>
+                                Παράδειγμα: <code style="color:black">int* x = new int[5];//πέντε θέσεις μνήμης για πίνακα ακεραίων</code> </li>
+                                </p>
+                               
+                        </ul>
+
+                        <p>
+                            Για την αποδέσμευση της μνήμης των πάνω εντολών δέσμευσης (στην x κάθε φορά) χρησιμοποιούμε
+                            την delete ως εξής:
+                        </p>
+
+                        <ul>
+                            <li>Απλό delete για αποδέσμευση μιάς μόνο θέσης μνήμης.
+                                <p>
+                                    Παράδειγμα: <code style="color:black">delete x;</code>
+                                </p>
+                               
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>delete[] αποδέσμευση πολλών θέσεων μνήμης από πίνακα. 
+                                <p>
+                                    Παράδειγμα:<code style="color:black">delete[] x;</code>
+                                </p>
+                               
+                            </li>
+                        </ul>
+
+
+                        <p>Εδώ είναι ένα παράδειγμα κώδικα στη C++ που χρησιμοποιεί τον τελεστή <strong>new</strong>
+                            για να δημιουργήσει έναν πίνακα ακεραίων με δυναμική δέσμευση μνήμης κάνοντας στο τέλος και
+                            αποδέσμευση με τo delete:</p>
+
+                        <pre>
+        <code>
+#include &lt;iostream&gt;
+
+int main() {
+    int size = 5;
+    int* dynamicArray = new int[size];
+
+    for (int i = 0; i &lt; size; i++) {
+        dynamicArray[i] = i * 2;
+    }
+
+    //χρήση του πίνακα στο πρόγραμμα...
+
+    // Αποδέσμευση της δεσμευμένης μνήμης
+    delete[] dynamicArray;
+
+    return 0;
+}
+        </code>
+    </pre>
+
+                        <p>Στο παράδειγμα αυτό, ο πίνακας <strong>dynamicArray</strong> δημιουργείται δυναμικά στη σωρό
+                            με χρήση του
+                            <strong>new</strong>, και απελευθερώνεται με τη χρήση του <strong>delete[]</strong> όταν δεν
+                            χρειάζεται πλέον.
+                        </p>
+
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <!--
+            <ul id="chapter-end-menu">
+                <li><a href="../chapter2/chapter2.html">&larr; Προηγούμενο Κεφάλαιο</a></li>
+                <li><a href="../main_menu.php">Αρχικό Μενού</a></li>
+                <li><a href="../chapter4/chapter4.html">Επόμενο Κεφάλαιο &rarr;</a></li>
+            -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../chapter2/chapter2.html">Προηγούμενο Κεφάλαιο</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../main_menu.php">Αρχικό Μενού</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../chapter4/chapter4.html">Επόμενο Κεφάλαιο</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        </ul>
+    </footer>
+
+    <script src="../javascript/disconnect-button.js" type="text/javascript"></script>
+    <script src="../javascript/bootstrap-js/bootstrap.js" type="text/javascript"></script>
+
+</body>
+
+</html>

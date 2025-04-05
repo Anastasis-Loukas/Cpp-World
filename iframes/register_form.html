@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Εγγραφή Φοιτητή</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="../styles/register-form-style.css">
+        
+    </head>
+    <body>
+        <main>
+            <form action="../registration.php" method="POST">
+                <input type="text" name="firstName" placeholder="'Ονομα φοιτητή" required><br><br>
+                <input type="text" name="lastName" placeholder="Επίθετο φοιτητή" required><br><br>
+                <input type="email" name="email" placeholder="Email φοιτητή" required><br><br>
+                <input type="password" name="password" placeholder="Κωδικός πρόσβασης" required><br><br><br>
+                <input type="submit" value="Υποβολή">
+            </form>
+        </main>
+    </body>
+</html>

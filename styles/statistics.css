@@ -1,0 +1,91 @@
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: skyblue;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    
+}
+
+
+#logo {
+    width: 282px;
+    height: 74px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    background-color: rgb(25, 25, 112);
+    color: white;
+    font-size: 44px;
+    border: 12px solid midnightblue;
+}
+
+#disconnect {
+    width: 150px;
+    height: 66px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(25, 25, 112);
+    border: 3px solid rgb(25, 25, 112);
+    color: white;
+    transition-duration: 0.4s;
+    margin-right: 10px; /* Προσθήκη αποστάσεως από το κουμπί Στατιστικά */
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 74px; 
+
+    
+}
+
+
+
+
+#disconnect:hover {
+    background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: orange;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}

@@ -1,0 +1,23 @@
+body{
+    background-image: url(../images/pada.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-size: cover;
+    font-family: Arial;
+}
+#text-cloud {
+    background: transparent;
+    border: none !important;
+    font-size: 0pt;
+    border-radius: 100%;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    left: 1000px;
+    top: 100px;
+}
+
+h1, div {
+    text-align: center;
+}

@@ -1,0 +1,112 @@
+body {
+    /*background-color: rgb(196, 228, 250);*/
+    background-color: lightgray;
+    font-family: Arial;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+main {
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 8px;
+   
+    
+}
+
+
+#logo {
+    width: 282px;
+    height: 74px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    
+}
+
+#title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    background-color: rgb(25, 25, 112);
+    color: white;
+    font-size: 44px;
+    border: 12px solid midnightblue;
+    text-align: center;
+}
+
+#disconnect {
+    width: 150px;
+    height: 74px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(25, 25, 112);
+    border: 3px solid rgb(25, 25, 112);
+    border-left: 1px solid black;
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+
+#disconnect:hover {
+    /*background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);*/
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+code {
+    font-size: 16px;
+}
+
+#submit-button {
+    text-align: center;
+}
+
+#container{
+    background-color: #ededf0;
+   
+}
+
+input[type="submit"] {
+    font-size: 28px;
+    cursor: pointer;
+    background-color: skyblue;
+    color: black;
+    transition-duration: 0.4s;
+}
+
+input[type="submit"]:hover {
+    background-color: black;
+    color: white;
+    font-size: 34px;
+    border-radius: 5px;
+}
+
+tr td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table-type1 td:nth-child(2){
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.table-type2 td:nth-child(2){
+    padding-right: 60px;
+}
+
+.table-type3 td:nth-child(2){
+    padding-right: 80px;
+}
+

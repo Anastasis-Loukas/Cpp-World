@@ -1,0 +1,26 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    font-family: Arial;
+    color:rgb(196, 196, 196);
+}
+
+button {
+    background: transparent;
+    border:none !important;
+    position: relative;
+    cursor: pointer;
+    width: 1200px;
+    height: 1340px;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 80%;
+    top: -123px;
+    left: 712px;
+    
+}
+
+#header-el, #iframe-el, #paragraph-el {
+    text-align: center;
+}

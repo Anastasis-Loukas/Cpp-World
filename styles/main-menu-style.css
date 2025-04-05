@@ -1,0 +1,251 @@
+body {
+    text-align: center;
+    /*background-color: skyblue;*/
+    /*background-color: rgb(196, 228, 237);*/
+    background-color: rgb(196, 228, 250);
+    font-family: Arial;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0; 
+}
+    
+
+/*#logo {
+    width: 77px;
+    height: 74px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}*/
+
+#logo {
+    width: 282px;
+    height: 74px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+
+#title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    background-color: rgb(25, 25, 112);
+    color: white;
+    font-size: 44px;
+    border: 12px solid midnightblue;
+}
+
+#menu {
+    display: flex;
+    align-items: center; /* Κέντραρισμα κατακόρυφα */
+    padding: 10px; /* Προσθέτουμε padding για ανάστροφη επικάλυψη με τα κουμπιά */
+    background-color: rgb(25, 25, 112);
+    color: white; /* Χρώμα κειμένου */
+    display: flex;
+    justify-content: flex-end; /* Τα κουμπιά θα είναι στα δεξιά άκρη του μενού */
+    
+}
+
+
+
+#disconnect {
+    width: 150px;
+    height: 87px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(25, 25, 112);
+    border: 3px solid rgb(25, 25, 112);
+    color: white;
+    transition-duration: 0.4s;
+    margin-right: 10px; /* Προσθήκη αποστάσεως από το κουμπί Στατιστικά */
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    line-height: 74px; 
+    
+}
+
+
+
+#disconnect:hover {
+    background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+#statistics {
+
+    width: 150px;
+    height: 87px;
+    cursor: pointer;
+    font-size: 16px;
+    background-color: rgb(25, 25, 112);
+    border: 3px solid rgb(25, 25, 112);
+    color: white;
+    transition-duration: 0.4s;
+    position: absolute;
+    top: 0;
+    right: 160px;
+    text-align: center;
+    line-height: 74px; 
+}
+
+#statistics:hover {
+    background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+#reset_grades{
+    text-shadow: 5px 5px 10px black;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+#reset_grades:hover{
+    background-color: rgb(255, 163, 51);
+    border: 3px solid rgb(255, 163, 51);
+    background-color: rgb(255, 175, 77);
+    border: 3px solid rgb(255, 175, 77);
+    color: white;
+}
+
+h2 {
+    font-size: 32px;
+    text-decoration: underline;
+}
+
+
+.chapters, .exercises,.quiz {
+    /*border: 2px solid black;*/
+    text-shadow: 5px 5px 10px black;
+    /*text-shadow: 5px 5px 5px black;*/
+    /*text-shadow: 0px 0px 20px black;*/
+    /*text-shadow: -100px -30px 5px black, 100px 30px 5px black, -100px 30px 5px black, 100px -30px 5px black;*/
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+.finished_exercises{
+    text-shadow: 5px 5px 10px gray;
+    color: gray;
+    font-size: 30px;
+    text-decoration: none;
+    /*background-color:lightgray;*/
+    padding: 10px 10px 10px 10px;
+ 
+}
+
+
+.chapters:hover {
+    border: 2px solid goldenrod;
+    background-color: goldenrod;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    text-shadow: none;
+}
+
+
+.exercises:hover {
+    border: 2px solid tomato;
+    background-color: tomato;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    text-shadow: none;
+}
+
+.quiz:hover{
+    border: 2px solid tomato;
+    background-color: tomato;
+    border-radius: 10px;
+    font-size: 40px;
+    color: white;
+    text-shadow: none;
+}
+
+
+
+#chapter1 {
+    position: relative;
+    left: -400px;
+}
+
+#chapter2 {
+    position: relative;
+    top: -52px;
+}
+
+#chapter3 {
+    position: relative;
+    top: -104px;
+    left: 400px;
+}
+
+#chapter4 {
+    position: relative;
+    left: -200px;
+}
+
+
+#chapter5 {
+    position: relative;
+    top: -52px;
+    left: 200px;
+}
+
+#exercise1 {
+    position: relative;
+    left: -400px;
+}
+
+#exercise2 {
+    position: relative;
+    top: -52px;
+}
+
+#exercise3 {
+    position: relative;
+    left: 400px;
+    top: -104px;
+}
+
+#exercise4 {
+    position: relative;
+    left: -400px;
+}
+
+
+#exercise5 {
+    position: relative;
+    top: -52px;
+    
+}
+
+
+#exerciseFinal {
+
+    /*αυτό είναι σωστό όταν έχουμε και τις ασκ 4,5 στο main menu*/
+   /* position: relative; 
+    left: 400px;
+    top: -104px;*/
+
+    position: relative;
+    top: -104px;
+    left: 400px;
+    
+    
+}
+
